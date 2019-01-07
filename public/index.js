@@ -170,6 +170,14 @@ events.forEach(function(event) {
     })
 });
 
+events.forEach(function(event){
+
+        event.commission.insurance= event.price*0.5 ;
+        event.commission.treasury=1;
+        event.commission.privateaser=event.price-event.commission.insurance-event.commission.treasury;
+
+});
+
 console.log(bars);
 console.log(events);
 console.log(actors);
