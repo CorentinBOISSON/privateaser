@@ -153,6 +153,18 @@ events.forEach(function(event) {
       if (event.barId == bar.id){
 
           event.price=event.time*bar.pricePerHour + event.persons*bar.pricePerPerson;
+
+          if (event.persons>60){
+            event.price=event.price*0.5;
+          }
+
+          else if (event.persons>20){
+              event.price=event.price*0.7;
+          }
+
+          else if (event.persons>10){
+              event.price=event.price*0.9;
+          }
       }
 
     })
