@@ -186,7 +186,19 @@ events.forEach(function(event){
         event.price++;
     }
 
+});
 
+actors.forEach(function(actor) {
+
+    events.forEach(function(event){
+
+        if (actor.eventId == event.id){
+
+
+
+        }
+
+    })
 });
 
 
