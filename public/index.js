@@ -178,6 +178,20 @@ events.forEach(function(event){
         event.commission.privateaser=event.price*0.3-event.commission.insurance-event.commission.treasury;
 });
 
+
+events.forEach(function(event){
+
+    if(event.deductibleReduction==true){
+        event.commission.privateaser++;
+        event.price++;
+    }
+
+
+});
+
+
+
+
 console.log(bars);
 console.log(events);
 console.log(actors);
