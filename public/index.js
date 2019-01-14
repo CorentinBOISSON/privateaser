@@ -194,7 +194,7 @@ for (var i =0; i<actors.length;i++ )
 {
     events.forEach(function(event){
 
-        if (actors.eventId == event.id){
+        if (actors[i].eventId == event.id){
             actors[i].payment[0].amout= event.price;
             actors[i].payment[1].amout= event.price-event.commission;
             actors[i].payment[2].amout= event.commission.treasury;
