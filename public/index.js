@@ -194,7 +194,7 @@ actors.forEach(function(actor) {
 
         if (actor.eventId == event.id){
 
-            actors.payment.forEach(function(pay){
+            actors.forEach(function(pay){
 
                 if (pay.who == "booker"){
 
