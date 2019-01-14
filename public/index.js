@@ -194,6 +194,40 @@ actors.forEach(function(actor) {
 
         if (actor.eventId == event.id){
 
+            actors.payment.forEach(function(pay){
+
+                if (pay.who == "booker"){
+
+                pay.amount == event.price;
+
+                }
+
+                if (pay.who == "bar"){
+
+                    pay.amount == event.price-event.commission;
+
+                }
+
+                if (pay.who == "insurance"){
+
+                    pay.amount == event.commission.insurance;
+
+                }
+
+                if (pay.who == "treasury"){
+
+                    pay.amount == event.commission.treasury;
+
+                }
+
+                if (pay.who == "privateaser"){
+
+                    pay.amount == event.commission.privateaser;
+
+                }
+
+            })
+
 
 
         }
