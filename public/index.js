@@ -188,54 +188,22 @@ events.forEach(function(event){
 
 });
 
-actors.forEach(function(actor) {
 
+for (var i =0; i<actors.length;i++ )
+
+{
     events.forEach(function(event){
 
-        if (actor.eventId == event.id){
-
-            actors.forEach(function(pay){
-
-                if (pay.who == "booker"){
-
-                pay.amount == event.price;
-
-                }
-
-                if (pay.who == "bar"){
-
-                    pay.amount == event.price-event.commission;
-
-                }
-
-                if (pay.who == "insurance"){
-
-                    pay.amount == event.commission.insurance;
-
-                }
-
-                if (pay.who == "treasury"){
-
-                    pay.amount == event.commission.treasury;
-
-                }
-
-                if (pay.who == "privateaser"){
-
-                    pay.amount == event.commission.privateaser;
-
-                }
-
-            })
-
-
-
+        if (actors.eventId == event.id){
+            actors[i].payment[0].amout= event.price;
+            actors[i].payment[1].amout= event.price-event.commission;
+            actors[i].payment[2].amout= event.commission.treasury;
+            actors[i].payment[3].amout= event.commission.privateaser ;
         }
 
-    })
-});
+    });
 
-
+}
 
 
 console.log(bars);
