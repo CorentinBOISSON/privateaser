@@ -195,10 +195,10 @@ for (var i =0; i<actors.length;i++ )
     events.forEach(function(event){
 
         if (actors[i].eventId == event.id){
-            actors[i].payment[0].amout= event.price;
-            actors[i].payment[1].amout= event.price-event.commission;
-            actors[i].payment[2].amout= event.commission.treasury;
-            actors[i].payment[3].amout= event.commission.privateaser ;
+            actors[i].payment[0].amount= event.price;
+            actors[i].payment[1].amount= event.price-event.commission;
+            actors[i].payment[2].amount= event.commission.treasury;
+            actors[i].payment[3].amount= event.commission.privateaser ;
         }
 
     });
